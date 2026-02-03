@@ -6,6 +6,11 @@ on:
       - main
   workflow_dispatch:
 
+# Required permissions so the workflow can create and push the `gh-pages` branch
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   deploy:
     name: Deploy
